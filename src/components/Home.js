@@ -1,18 +1,20 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { createClient } from 'pexels';
+import PhotoCard from './PhotoCard'
 
 export default function Home() {
-    const cors = 'https://cors-anywhere.herokuapp.com/'
     const API_KEY = '563492ad6f91700001000001078da128e4d741aab9817271ae708059'
-    const BASE_URL = `https://api.pexels.com/v1`
+
+    const [photos, setPhotos] = useState([])
 
     const getData = () => {
         const client = createClient(API_KEY)
         const query = 'Nature'
 
-        client.photos.search({ query, per_page: 10 }).then(photos => {
-        //const data = photos.split(0, 12)
+        client.photos.search({ query, per_page: 10 }).then(data => {
+        const photos = data.photos
         console.log(photos)
+        setPhotos(photos)
         })
     }
 
@@ -21,8 +23,12 @@ export default function Home() {
     }, [])
 
     return (
-        <div>
-            
+        <div className="container">
+            <div className="card_container">
+                {photos.map(photo => (
+                    <PhotoCard key={photo.id} photo={photo} />
+                ))}
+            </div>
         </div>
     )
 }
