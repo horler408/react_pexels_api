@@ -2,12 +2,55 @@
   text-align: center;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+}
+
+.nav {
+  width: 100%;
+  min-height: 20vh;
+}
+
+.container {
+  width: 100%;
+}
+
 .card_container {
+  width: 90%;
 }
 
 .card_item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .card_item img {
   height: 100%;
+  width: 100%;
+}
+
+@media only screen and (min-width: 420px) {
+  .card_container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  .card_item {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 25%;
+    margin: 20px;
+  }
 }

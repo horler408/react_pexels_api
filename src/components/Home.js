@@ -11,7 +11,7 @@ export default function Home() {
         const client = createClient(API_KEY)
         const query = 'Nature'
 
-        client.photos.search({ query, per_page: 10 }).then(data => {
+        client.photos.search({ query, per_page: 30 }).then(data => {
         const photos = data.photos
         console.log(photos)
         setPhotos(photos)
