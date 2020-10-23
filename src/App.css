@@ -23,12 +23,12 @@ body {
 
 .card_container {
   width: 90%;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
 }
 
 .card_item {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  width: 90%;
+  border: 5px inset orange;
 }
 
 .card_item img {
@@ -50,7 +50,11 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 25%;
+    width: 30%;
     margin: 20px;
+    transition: all 1s ease-in-out;
+  }
+  .card_item img:hover {
+    scale: 1.5;
   }
 }
