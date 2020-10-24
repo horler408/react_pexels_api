@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { createClient } from 'pexels';
 import PhotoCard from './PhotoCard'
-import Modal from './Modal'
 
 export default function Home() {
     const API_KEY = '563492ad6f91700001000001078da128e4d741aab9817271ae708059'
 
     const [photos, setPhotos] = useState([])
-    const [open, setOpen] = useState(false)
+    const [opacity, setOpacity] = useState(0)
     const [caption, setCaption] = useState('')
+    const [pointer, setPointer] = useState('none')
+    const [scale, setScale] = useState(0.5)
 
     const getData = () => {
         const client = createClient(API_KEY)
@@ -25,20 +26,25 @@ export default function Home() {
         getData()
     }, [])
 
-    const handleModal = () => {
-        
+    const handleModal = (text) => {
+        setOpacity(1)
+        setCaption(text)
+        setPointer('all')
+        setScale(1)
     }
 
     return (
         <>
             <div className="card_container">
                 {photos.map(photo => (
-                    <PhotoCard key={photo.id} photo={photo} />
-                ))}
-            </div>
-            <div className="modal_container">
-                {photos.map(photo => (
-                    <Modal key={photo.id} photo={photo} caption={caption} />
+                    <PhotoCard key={photo.id} 
+                    pointer={pointer}
+                    scale={scale} 
+                    open={opacity} 
+                    caption={caption} 
+                    handleClick={handleModal} 
+                    photo={photo} 
+                    />
                 ))}
             </div>
         </>
