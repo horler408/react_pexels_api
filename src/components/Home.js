@@ -33,6 +33,11 @@ export default function Home() {
         setScale(1)
     }
 
+    const removeModal = () => {
+        setOpacity(0)
+        setPointer('none')
+    }
+
     return (
         <>
             <div className="card_container">
@@ -42,7 +47,8 @@ export default function Home() {
                     scale={scale} 
                     open={opacity} 
                     caption={caption} 
-                    handleClick={handleModal} 
+                    handleClick={handleModal}
+                    removeModal={removeModal} 
                     photo={photo} 
                     />
                 ))}
