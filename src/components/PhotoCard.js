@@ -21,7 +21,7 @@ export default function PhotoCard({ photo, pointer, scale, open, caption, remove
                     className='full_img' 
                     style={{transform: scale}}
                 />
-                <p className="caption">Author: {caption}</p>
+                <p className="caption">Photographer: {caption}</p>
             </div>
         </div>
     )

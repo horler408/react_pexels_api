@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-import Home from './components/Home'
-//import Home from './junks/HomeJunks'
+//import Home from './components/Home'
+import Home from './junks/HomeJunks'
 import Nav from './components/NavBar'
 import About from './components/About'
 import FourOFour from './components/FourOFour'
