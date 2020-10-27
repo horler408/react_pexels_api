@@ -12,7 +12,7 @@ import FourOFour from './components/FourOFour'
 
 function App() {
   return (
-    <div className="App">
+    <div className="app_container">
       <Router>
         <Nav />
         <Switch>
