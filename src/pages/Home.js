@@ -44,7 +44,8 @@ export default function Home() {
         <>
             <div className="card_container">
                 {photos.map(photo => (
-                    <PhotoCard key={photo.id} 
+                    <PhotoCard key={photo.id}
+                    id={photo.id} 
                     pointer={pointer}
                     scale={scale} 
                     open={opacity} 

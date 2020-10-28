@@ -29,7 +29,7 @@ function App() {
           <Route path='/contacts'>
             <Contacts />
           </Route>
-          <Route path='/details'>
+          <Route exact path='/:id'>
             <Details />
           </Route>
           <Route path="*">
