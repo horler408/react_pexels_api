@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { createClient } from 'pexels';
-import PhotoCard from './PhotoCard'
+import PhotoCard from './../components/PhotoCard';
 
 export default function Home() {
     const API_KEY = '563492ad6f91700001000001078da128e4d741aab9817271ae708059'

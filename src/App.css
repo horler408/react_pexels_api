@@ -21,6 +21,7 @@ body {
 .logo {
   width: 200px;
   height: 100px;
+  margin: 10px;
 }
 
 .nav_links {
@@ -28,7 +29,7 @@ body {
   top: -50px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   font-size: 1rem;
 }
 
@@ -36,18 +37,17 @@ body {
   list-style: none;
   width: 70px;
   height: 30px;
-  margin: 20px;
+  margin: 10px;
   border-radius: 5px;
   padding: 5px 10px;
-  background: orange;
+  background: rgba(255, 255, 255, 0.75);
 }
 .nav_item a {
   text-decoration: none;
   color: #222;
 }
 .nav_item:hover {
-  background: #222;
-  color: #fff;
+  background: whitesmoke;
 }
 
 .container {
@@ -55,12 +55,17 @@ body {
   height: 100vh;
 }
 
-.card_container {
+.card_container,
+.page__container {
   position: relative;
   top: 200px;
   width: 90%;
+  min-height: 100vh;
   margin: 0 auto;
   background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+.page__container {
+  width: 100%;
 }
 
 .card_item {
