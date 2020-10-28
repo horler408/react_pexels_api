@@ -8,7 +8,8 @@ import Footer from './components/Footer';
 import About from './pages/About'
 import Services from './pages/Services'
 import Contacts from './pages/Contacts'
-import Details from './pages/Details'
+//import Details from './pages/Details'
+import Details from './junks/DetailJunk';
 import FourOFour from './components/FourOFour'
 
 function App() {
