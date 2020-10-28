@@ -118,10 +118,10 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   height: 50vh;
-  /* margin-top: 50px; */
   background: #222;
   color: white;
   padding-left: 20px;
+  text-align: center;
 }
 
 @media only screen and (min-width: 420px) {
@@ -177,5 +177,8 @@ body {
     bottom: 5%;
     left: 50%;
     transform: translate(-50%, -5%);
+  }
+  .footer {
+    text-align: left;
   }
 }
