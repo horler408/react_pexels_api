@@ -12,20 +12,21 @@ export default function Home() {
     const [scale, setScale] = useState(0.5)
     const [page, setPage] = useState(1)
 
-    const getData = () => {
-        const client = createClient(API_KEY)
-        const query = 'Nature'
-
-        client.photos.search({ query, per_page: 30 }).then(data => {
-        const photos = data.photos
-        console.log(photos)
-        setPhotos(photos)
-        })
-    }
+    
 
     useEffect(() => {
+        const getData = () => {
+            const client = createClient(API_KEY)
+            const query = 'Nature'
+    
+            client.photos.search({ query, page:page, per_page: 30 }).then(data => {
+            const photos = data.photos
+            console.log(photos)
+            setPhotos(photos)
+            })
+        }
         getData()
-    }, [])
+    }, [page])
 
     const handleModal = (text) => {
         setOpacity(1)
@@ -53,6 +54,10 @@ export default function Home() {
                     photo={photo} 
                     />
                 ))}
+            </div>
+            <div className='nav_btns'>
+                {page > 1 ? <button className='next' onClick={() => setPage(page - 1)}>Prev</button> : ''}
+                {page !== (page.length - 1) ? <button className='prev' onClick={() => setPage(page + 1)}>Next</button> : ''}
             </div>
         </>
     )
