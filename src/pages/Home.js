@@ -10,6 +10,7 @@ export default function Home() {
     const [caption, setCaption] = useState('')
     const [pointer, setPointer] = useState('none')
     const [scale, setScale] = useState(0.5)
+    const [page, setPage] = useState(1)
 
     const getData = () => {
         const client = createClient(API_KEY)

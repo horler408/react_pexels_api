@@ -3,7 +3,8 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Home from './pages/Home'
 //import Home from './junks/HomeJunks'
-import Nav from './components/NavBar'
+import Nav from './components/NavBar';
+import Footer from './components/Footer';
 import About from './pages/About'
 import Services from './pages/Services'
 import Contacts from './pages/Contacts'
@@ -35,6 +36,7 @@ function App() {
             <FourOFour />
           </Route>
         </Switch>
+        <Footer />
       </Router>
     </div>
   );
